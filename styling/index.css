@@ -177,7 +177,7 @@ main .container .show {
 main .container .show .kharab {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 main .container .show div .timesContainer {
     display: flex;
@@ -216,8 +216,8 @@ main .container .show .dayDate::after{
     content: '';
     position: absolute;
     height: 2px;
-    width: 200px;
-    bottom: 0;
-    background-color: var(--accent-color);
+    width: 160px;
+    bottom: -10px;
+    background-color: var(--secondary-color);
     
 }
