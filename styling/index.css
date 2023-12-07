@@ -13,8 +13,8 @@
 }
 
 body {
-    font-family: cairo;
-}
+    font-family: 'Amiri Quran', serif;
+    font-family: 'Cairo', sans-serif;}
 .container {
     padding-left: 2rem;
     padding-right: 2rem;
