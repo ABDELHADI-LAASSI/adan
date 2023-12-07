@@ -1,3 +1,18 @@
+function nav(){
+    let navBarIcon = document.getElementById("bar");
+    let navAll = document.getElementById("navAll");
+
+
+    navBarIcon.onclick = function() {
+        if(navAll.style.display == "none") {
+            navAll.style.display = "block"
+        } else {
+            navAll.style.display = "none";
+        }
+    }
+}
+nav()
+
 function adanTime() {
 
 

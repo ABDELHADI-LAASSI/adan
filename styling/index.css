@@ -1,0 +1,223 @@
+:root {
+    --main-color: #00A74D; /* Main green color */
+
+    /* Other colors */
+    --secondary-color: #008438; /* A slightly darker green */
+    --accent-color: #FF5733; /* An accent color (e.g., orange) */
+    --text-color: #333333; /* Text color */
+    --background-color: #F5F5F5; /* Background color */
+    --link-color: var(--main-color); /* Link color (use main color for links) */
+    --button-background: #0073e6; /* Button background color */
+    --button-text-color: #ffffff; /* Button text color */
+    --section-background: #ECECEC;
+}
+
+body {
+    font-family: cairo;
+}
+.container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+@media (max-width:1060px) {
+    .container {
+        padding-left:1rem ;
+        padding-right:  1rem ;
+        margin-left :1rem;
+        margin-right :1rem;
+    }
+}
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+header .container {
+    display:flex;
+    flex-direction: row-reverse;
+}
+header .container .div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+header .container img {
+    height: 60px;
+    margin-right: 1rem;
+}
+header .container .div p {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+header .container nav {
+    display: flex;
+    flex: 1;
+    /* justify-content: flex-start; */
+    /* height: 100%; */
+}
+header .container ul {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+header .container nav ul li {
+    margin-right: 2rem;
+}
+header .container nav ul li a{
+    text-decoration: none;
+    color:var(--text-color) ;
+    font-weight: 500;
+    position: relative;
+}
+
+header .container nav ul li a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    width: 0; /* Set an initial width of 0 */
+    height: 3px;
+    background-color: var(--accent-color);
+    transition:  .5s; /* Only transition the width property */
+}
+
+header .container nav ul li:hover a::after {
+    width: 100%; /* Increase the width to 100% on hover */
+}
+#bar {
+    height: 1rem;
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+    z-index: 3;
+    
+}
+@media (max-width:1000px) {
+    header .container .div {
+        align-self: flex-end;
+        padding-right: 1rem;
+        margin-right: 1rem;
+    }
+    #bar {
+        display: block;
+    }
+    header .container {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        height: 100%;
+    }
+    header .container nav {
+        display: none;
+        width: 100%;
+        padding-right: 2rem;
+        background-color: var(--background-color);
+        height: 100%;
+        z-index: 1;
+        transition: 1s;
+        margin-bottom: 2rem;
+    }
+    header .container nav ul {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2rem;
+    }
+    header .container nav ul li {
+        margin-right: 0;
+    }
+}
+p {
+    margin: 0;
+}
+main .container .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+main .container .info button {
+    border: 0;
+    background-color: transparent;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    color: var(--button-background);
+    cursor: pointer;
+}
+
+main .container .info select {
+    width: 150px;
+    padding: 10px;
+    cursor: pointer;
+}
+main .container .info select option {
+    padding: 10px;
+    color: firebrick;
+}
+main .container .show {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+main .container .show .kharab {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+main .container .show div .timesContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .container .show div .timesContainer div {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+main .container .show div .timesContainer div::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--accent-color);
+}
+
+main .container .show .dayDate {
+    text-align: center;
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+main .container .show .dayDate::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    bottom: 0;
+    background-color: var(--accent-color);
+    
+}
