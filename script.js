@@ -6,26 +6,24 @@ function adanTime() {
     axios.get(`http://api.aladhan.com/v1/calendarByCity?country=MA&&city=${city}`)
     .then((response)=>{
         let data = response.data
-
+        console.log(data)
+        document.getElementById("show").innerHTML= ""
         for (ele in data.data) {
             document.getElementById("show").innerHTML+= `
-            
-            <div>
+            <div class="kharab">
                     <p class="dayDate" >${response.data.data[ele].date.gregorian.date}</p>
-                    <p>Fajr <span>${response.data.data[ele].timings.Fajr}</span> </p>
-                    <p>Choroq <span>${response.data.data[ele].timings.Sunrise}</span> </p>
-                    <p>Dohr <span>${response.data.data[ele].timings.Dhuhr}</span> </p>
-                    <p>Asr <span>${response.data.data[ele].timings.Asr}</span> </p>
-                    <p>Sunset <span>${response.data.data[ele].timings.Sunset}</span> </p>
-                    <p>Ichaa <span>${response.data.data[ele].timings.Maghrib}</span> </p>
+                    <div class="timesContainer">
+                        <div> <p>  Fajr    </p> <p>${response.data.data[ele].timings.Fajr.split(' ')[0]}  </p>  </div> 
+                        <div> <p>  Choroq  </p> <p>${response.data.data[ele].timings.Sunrise.split(' ')[0]}  </p>  </div> 
+                        <div> <p>  Dohr    </p> <p>${response.data.data[ele].timings.Dhuhr.split(' ')[0]}  </p>  </div> 
+                        <div> <p>  Asr     </p> <p>${response.data.data[ele].timings.Asr.split(' ')[0]}  </p>  </div> 
+                        <div> <p>  Sunset  </p> <p>${response.data.data[ele].timings.Sunset.split(' ')[0]}  </p>  </div> 
+                        <div> <p>  Ichaa   </p> <p>${response.data.data[ele].timings.Maghrib.split(' ')[0]}  </p>  </div> 
                     </div>
+            </div>
             `
         }
     })
-
-
 }
-
-
 document.getElementById("btn").addEventListener("click",adanTime)
 
