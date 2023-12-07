@@ -18,7 +18,7 @@ function adanTime() {
 
     let city = document.getElementById("city").value
 
-    fetch(`http://api.aladhan.com/v1/calendarByCity?country=MA&&city=${city}`)
+    fetch(`https://api.aladhan.com/v1/calendarByCity?country=MA&&city=${city}`)
     .then((response) => response.json())
     .then((json) => {
         let data = json
@@ -41,7 +41,7 @@ function adanTime() {
         }
     });
 
-    // axios.get(`http://api.aladhan.com/v1/calendarByCity?country=MA&&city=${city}`)
+    // axios.get(`https://api.aladhan.com/v1/calendarByCity?country=MA&&city=${city}`)
     // .then((response)=>{
     //     let data = response.data
     //     console.log(data)
