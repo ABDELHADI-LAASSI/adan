@@ -34,7 +34,7 @@ function adanTime() {
                         <div> <p>  Dohr    </p> <p>${json.data[ele].timings.Dhuhr.split(' ')[0]}  </p>  </div> 
                         <div> <p>  Asr     </p> <p>${json.data[ele].timings.Asr.split(' ')[0]}  </p>  </div> 
                         <div> <p>  Sunset  </p> <p>${json.data[ele].timings.Sunset.split(' ')[0]}  </p>  </div> 
-                        <div> <p>  Ichaa   </p> <p>${json.data[ele].timings.Maghrib.split(' ')[0]}  </p>  </div> 
+                        <div> <p>  Ichaa   </p> <p>${json.data[ele].timings.Isha.split(' ')[0]}  </p>  </div> 
                     </div>
             </div>
             `
